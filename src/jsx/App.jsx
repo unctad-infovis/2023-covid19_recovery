@@ -42,7 +42,7 @@ function Figure1() {
         data={dataFigure}
         data_decimals={0}
         note=""
-        source=""
+        source="UNCTAD secretariat calculations based on data from UNCTADStat, UN Comtrade and National Statistics."
         subtitle="Number of developing economies with trade below 2019 levels"
         suffix=""
         title="World trade recovered from COVID-19 but not every country did"
