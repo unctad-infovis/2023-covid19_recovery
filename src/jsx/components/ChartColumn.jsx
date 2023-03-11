@@ -74,6 +74,12 @@ function ColumnChart({
         x: 0
       },
       chart: {
+        events: {
+          load() {
+            // eslint-disable-next-line react/no-this-in-sfc
+            this.renderer.image('https://unctad.org/sites/default/files/2022-11/unctad_logo.svg', 5, 15, 80, 100).add();
+          }
+        },
         height: 650,
         resetZoomButton: {
           theme: {
@@ -132,7 +138,7 @@ function ColumnChart({
           title: {
             x: 100,
             margin: export_title_margin,
-            widthAdjust: -144
+            widthAdjust: -140
           }
         }
       },
@@ -159,7 +165,9 @@ function ColumnChart({
           fontWeight: 400,
           lineHeight: '18px'
         },
-        text: subtitle
+        text: subtitle,
+        widthAdjust: -144,
+        x: 100
       },
       title: {
         align: 'left',
@@ -169,7 +177,9 @@ function ColumnChart({
           fontSize: '30px',
           fontWeight: 700
         },
-        text: title
+        text: title,
+        widthAdjust: -144,
+        x: 100
       },
       plotOptions: {
         column: {
